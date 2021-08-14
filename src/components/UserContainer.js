@@ -21,7 +21,7 @@ const UserContainer = ({userData, fetchUsers}) => {
         <div>
           {userData?.users?.length > 0 &&
              userData.users.map(user=>
-              <p key={user.id}>{user.name}</p>)
+              <p className="mb-3"  key={user.id}>{user.name}</p>)
           }
         </div>
        </div>
