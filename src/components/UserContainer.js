@@ -14,7 +14,7 @@ const UserContainer = ({userData, fetchUsers}) => {
   <h2>{userData.error}</h2>
  ): (
   <div>
-   <h2>Users</h2>
+   <h2>Users</h2> 
    <div>
     {
      userData?.users?.length > 0 &&
