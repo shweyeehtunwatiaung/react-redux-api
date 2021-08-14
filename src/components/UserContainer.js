@@ -15,12 +15,17 @@ const UserContainer = ({userData, fetchUsers}) => {
  ): (
   <div>
    <h2>Users</h2>
-   <div>
-    {
-     userData?.users?.length > 0 &&
-     userData.users.map(user=>
-      <p key={user.id}>{user.name}</p>)
-    }
+   <div className="container">
+     <div className="row">
+       <div className="col-12">
+        <div>
+          {userData?.users?.length > 0 &&
+             userData.users.map(user=>
+              <p key={user.id}>{user.name}</p>)
+          }
+        </div>
+       </div>
+     </div>
    </div>
   </div>
  )
