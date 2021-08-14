@@ -9,4 +9,4 @@ git branch = branch
 git checkout (branch name)
 
 git status
-git add . (.....)
+git add .
