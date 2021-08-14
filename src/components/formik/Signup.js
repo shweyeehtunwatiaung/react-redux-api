@@ -15,12 +15,16 @@ export const Signup = () => {
    .email('Email is invalid')
    .required('Email is Required'),
   password: Yup.string()
-   .max(5, 'Password Must be 5 characters or less')
+   .max(5,'Password Must be 5 characters or less')
    .required('Password is Required'),
   confirmPassword: Yup.string()
-   .oneOf([Yup.ref('password'), null], 'Password must match')
+   .oneOf([Yup.ref('password'), null],'Password must match')
    .required('Comfirm Password is Required'),
  })
+
+ const onSubmitForm = data => {
+   console.log(data)
+ }
 
  return (
   <Formik
@@ -32,17 +36,14 @@ export const Signup = () => {
     comfirmPassword: ''
    }}
    validationSchema={validate}
-   onSubmit={values=>{
-    console.log(values)
-   }}
+   onSubmit={onSubmitForm}
   >
-   {
-    formik => (
+   {formik => (
      <div>
       <h1 className="my-4 font-weight-bold-display-4">Sign up</h1>
       <Form>
-       <TextField label="First Name" name="firstName" type="text" />
-       <TextField label="Last Name" name="lastName" type="text" />
+       <TextField label="First Name" name="firstName" type="text" asdasd />
+       <TextField label="Last Name" name="lastName" type="text" aaa />
        <TextField label="Email" name="email" type="email" />
        <TextField label="Password" name="password" type="password" />
        <TextField label="Confirm Password" name="comfirmpassword" type="password" />
